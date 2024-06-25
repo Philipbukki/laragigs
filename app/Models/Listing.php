@@ -15,6 +15,24 @@ class Listing{
             "title"=>"Second listing",
             "poster"=>"Vero Phil",
             "description"=> "A very incredible listing by her excellency"
+        ],
+        [
+            "id"=>2,
+            "title"=>"Second listing",
+            "poster"=>"Vero Phil",
+            "description"=> "A very incredible listing by her excellency"
+        ],
+        [
+            "id"=>2,
+            "title"=>"Second listing",
+            "poster"=>"Vero Phil",
+            "description"=> "A very incredible listing by her excellency"
+        ],
+        [
+            "id"=>2,
+            "title"=>"Second listing",
+            "poster"=>"Vero Phil",
+            "description"=> "A very incredible listing by her excellency"
         ]
    
         ];
