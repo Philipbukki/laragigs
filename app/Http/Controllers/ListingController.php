@@ -10,8 +10,10 @@ class ListingController extends Controller
     //
     public function index(){
 
+        $listings = Listing::all();
+
         return view('listings/index',[
-            "listings"=> Listing::all()
+            "listings"=> $listings
     
         ]);
 
@@ -19,9 +21,11 @@ class ListingController extends Controller
 
     public function show($id){
 
+        $listing = Listing::find($id);
+
         return view('listings/show',[
 
-        "listing"=> Listing::getById($id),
+        "listing"=> $listing,
 
     ]);
 

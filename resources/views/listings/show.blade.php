@@ -13,32 +13,13 @@
                 alt=""
             />
 
-            <h3 class="text-2xl mb-2">{{$listing['title']}}</h3>
+            <h3 class="text-2xl mb-2">{{$listing->title}}</h3>
             <div class="text-xl font-bold mb-4">Acme Corp</div>
-            <ul class="flex">
-                <li
-                    class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                >
-                    <a href="#">Laravel</a>
-                </li>
-                <li
-                    class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                >
-                    <a href="#">API</a>
-                </li>
-                <li
-                    class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                >
-                    <a href="#">Backend</a>
-                </li>
-                <li
-                    class="bg-black text-white rounded-xl px-3 py-1 mr-2"
-                >
-                    <a href="#">Vue</a>
-                </li>
-            </ul>
+
+            <x-listing-tags :tagsCsv="$listing->tags"/>
+  
             <div class="text-lg my-4">
-                <i class="fa-solid fa-location-dot"></i> Daytona, FL
+                <i class="fa-solid fa-location-dot"></i> {{$listing->location}}
             </div>
             <div class="border border-gray-200 w-full mb-6"></div>
             <div>
@@ -46,21 +27,20 @@
                     Job Description
                 </h3>
                 <div class="text-lg space-y-6">
-                    <p>{{$listing['description']}} </p>
+                    <p>{{$listing->description}} </p>
                 
                     <a
                         href="mailto:test@test.com"
                         class="block bg-laravel text-white mt-6 py-2 rounded-xl hover:opacity-80"
                         ><i class="fa-solid fa-envelope"></i>
-                        Contact Employer</a
+                        {{$listing->company}}</a
                     >
 
                     <a
                         href="https://test.com"
                         target="_blank"
                         class="block bg-black text-white py-2 rounded-xl hover:opacity-80"
-                        ><i class="fa-solid fa-globe"></i> Visit
-                        Website</a
+                        ><i class="fa-solid fa-globe"></i>{{$listing->website}}</a
                     >
                 </div>
             </div>
